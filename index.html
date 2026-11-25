@@ -1,0 +1,1922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ayisha Diya P - Computer Science Student Portfolio. A colourful, rainbow-themed, interactive digital playground showcasing skills, projects, and learning journey.">
+  <title>Ayisha Diya P | Rainbow Creative Portfolio</title>
+  
+  <!-- Google Fonts: 'Outfit' for clean modern headings & 'Plus Jakarta Sans' for crisp readable text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons for colorful playful badges -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       1. TOP EXPLORATION PROGRESS BAR & HUD
+       Tracks how much of the portfolio has been explored!
+       ========================================== -->
+  <div id="scroll-progress-container" aria-label="Exploration Progress">
+    <div id="scroll-progress-bar"></div>
+  </div>
+
+  <!-- ==========================================
+       2. NAVIGATION BAR
+       Responsive, colourful header with player HUD badge
+       ========================================== -->
+  <header class="site-header" id="header">
+    <div class="nav-container">
+      <!-- Logo / Player Identity -->
+      <a href="#home" class="logo-link">
+        <div class="logo-badge">
+          <span class="logo-letters">AD</span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Ayisha Diya</span>
+          <span class="logo-tag">CS Explorer</span>
+        </div>
+      </a>
+
+      <!-- Gamified Player HUD Status (Stage 5 Enhanced) -->
+      <div class="player-hud" id="btn-open-dashboard" title="Click to open your Quest Dashboard" role="button" tabindex="0" aria-label="Open Portfolio Adventure Dashboard">
+        <span class="hud-icon">🎮</span>
+        <div class="hud-details">
+          <span class="hud-title"><strong id="hud-rank-display">Novice Scout</strong></span>
+          <span class="hud-xp"><span id="hud-points-display">0</span> PTS • <span id="hud-stars-display">0</span>/5 ⭐</span>
+        </div>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#journey" class="nav-link">Journey</a></li>
+          <li class="nav-item"><a href="#games" class="nav-link games-highlight">Mini Games 🕹️</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link btn-nav-cta">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+        <span class="hamburger-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         3. HERO / HOME SECTION
+         Stage 2: Full-screen animated hero, typing effect,
+         floating shapes, profile frame & scroll indicator
+         ========================================== -->
+    <section class="hero-section" id="home">
+      <!-- Decorative Floating Shapes & Subtle Blobs -->
+      <div class="hero-decorations" aria-hidden="true">
+        <div class="floating-blob blob-pink"></div>
+        <div class="floating-blob blob-cyan"></div>
+        <div class="floating-blob blob-purple"></div>
+
+        <div class="floating-shape shape-circle shape-pink"></div>
+        <div class="floating-shape shape-circle shape-yellow"></div>
+        <div class="floating-shape shape-circle shape-green"></div>
+        <div class="floating-shape shape-pill shape-cyan"></div>
+        <div class="floating-shape shape-square shape-purple"></div>
+        <div class="floating-shape shape-star shape-star-pink">✦</div>
+        <div class="floating-shape shape-star shape-star-purple">★</div>
+        <div class="floating-shape shape-star shape-star-cyan">✧</div>
+        <div class="floating-shape shape-sparkle shape-sparkle-1">✨</div>
+        <div class="floating-shape shape-sparkle shape-sparkle-2">✨</div>
+      </div>
+
+      <div class="container hero-container">
+        <!-- Hero Left Column: Intro & Interactive Actions -->
+        <div class="hero-content">
+          <!-- Welcoming Introduction Pill -->
+          <div class="badge-pill hero-pill hero-animate-1">
+            <span class="pill-dot"></span>
+            <span class="hero-pill-text">HELLO, WORLD!</span>
+            <span class="pill-sparkle">👋</span>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="hero-title hero-animate-2">
+            I'm <span class="rainbow-gradient-text animated-rainbow-text">Ayisha Diya P</span>
+          </h1>
+
+          <!-- Subtitle with Dynamic Typing Animation -->
+          <div class="hero-subtitle-box hero-animate-3">
+            <h2 class="hero-subtitle">
+              <span class="static-subtitle">Computer Science Student</span>
+              <span class="subtitle-separator">•</span>
+              <!-- Typing animation container (populated smoothly via script.js) -->
+              <span class="typing-container" id="typing-container" aria-label="Dynamic roles">
+                <span class="typing-text" id="typing-text">Computer Science Student</span>
+                <span class="typing-cursor" aria-hidden="true">|</span>
+              </span>
+            </h2>
+          </div>
+
+          <!-- Short Introduction -->
+          <p class="hero-description hero-animate-4">
+            An enthusiastic Computer Science student interested in technology, programming and creative web development. Stepping into the world of tech with curiosity, vibrant ideas, and lines of code to build playful, impactful digital experiences!
+          </p>
+
+          <!-- Two Interactive Action Buttons (Stage 2 Requirements) -->
+          <div class="hero-actions hero-animate-5">
+            <a href="#about" class="btn btn-primary btn-hero-explore" id="btn-explore-portfolio">
+              <span>Explore My Portfolio</span>
+              <i class="fa-solid fa-compass"></i>
+            </a>
+            <a href="#projects" class="btn btn-secondary btn-hero-projects" id="btn-view-projects">
+              <span>View My Projects</span>
+              <i class="fa-solid fa-code"></i>
+            </a>
+          </div>
+
+          <!-- Quick Stat Counters (Game Inspired) -->
+          <div class="hero-stats hero-animate-6">
+            <div class="stat-badge pink-border">
+              <span class="stat-number">Year 1</span>
+              <span class="stat-label">CS Major</span>
+            </div>
+            <div class="stat-badge cyan-border">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Curiosity</span>
+            </div>
+            <div class="stat-badge green-border">
+              <span class="stat-number">7+</span>
+              <span class="stat-label">Skills Unlocked</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Profile Image Area -->
+        <div class="hero-visual hero-animate-3">
+          <div class="avatar-stage">
+            <!-- Animated Glowing Rainbow Aura Rings -->
+            <div class="rainbow-glow-ring ring-1"></div>
+            <div class="rainbow-glow-ring ring-2"></div>
+
+            <!-- Profile Portrait Card Frame -->
+            <div class="avatar-card floating-card">
+              <div class="avatar-inner">
+                <!-- ========================================================
+                     PROFILE IMAGE PLACEHOLDER:
+                     To add your photo:
+                     1. Copy your picture (e.g. my-photo.jpg) into this folder.
+                     2. Uncomment the <img> line below and set src="my-photo.jpg".
+                     3. The image will automatically fit perfectly inside the frame!
+                     ======================================================== -->
+                <div class="avatar-portrait-frame" id="profile-image-slot">
+                  <!-- <img src="my-photo.jpg" alt="Ayisha Diya P" class="avatar-image"> -->
+                  <div class="avatar-placeholder-content">
+                    <span class="avatar-initials">AD</span>
+                    <span class="avatar-upload-hint">
+                      <i class="fa-solid fa-camera"></i>
+                      <span>Photo Slot</span>
+                    </span>
+                  </div>
+
+                  <!-- Creative Wand Sparkle Badge Overlay -->
+                  <div class="avatar-icon-overlay" title="Creative Code Explorer">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  </div>
+                </div>
+
+                <!-- Profile Status Tag -->
+                <div class="avatar-status-pill">
+                  <span class="status-indicator"></span>
+                  <span>Open to Collaborations</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Mini Achievement Badges -->
+            <div class="mini-float-badge float-badge-left">
+              <span class="badge-icon">🚀</span>
+              <span class="badge-info">Building Ideas</span>
+            </div>
+            <div class="mini-float-badge float-badge-right">
+              <span class="badge-icon">🎨</span>
+              <span class="badge-info">Creative UI/UX</span>
+            </div>
+
+            <!-- Orbiting Decorative Dots -->
+            <div class="orbit-dot orbit-dot-1" aria-hidden="true"></div>
+            <div class="orbit-dot orbit-dot-2" aria-hidden="true"></div>
+            <div class="orbit-dot orbit-dot-3" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Scroll Down Indicator (Guides visitors to #about) -->
+      <a href="#about" class="hero-scroll-indicator" id="hero-scroll-indicator" aria-label="Scroll to Explore About Me">
+        <span class="scroll-text">Scroll to Explore</span>
+        <div class="scroll-arrow-box">
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+      </a>
+    </section>
+
+    <!-- ==========================================
+         4. ABOUT ME SECTION (STAGE 3 ENHANCED)
+         Heading: Get to Know Me
+         Intro, Personal Info Cards, Interests & Animated Counters
+         ========================================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <!-- ==========================================
+             STAGE 5: GAMIFICATION INTRODUCTION BANNER
+             "Your Portfolio Adventure"
+             ========================================== -->
+        <div class="adventure-intro-banner reveal-on-scroll" id="adventure-banner">
+          <div class="adventure-banner-inner">
+            <div class="adventure-star-icon">
+              <span class="animated-star">⭐</span>
+            </div>
+            <div class="adventure-banner-content">
+              <div class="adventure-tag">Interactive Quest</div>
+              <h3 class="adventure-title">Your Portfolio Adventure</h3>
+              <p class="adventure-text">
+                Explore my portfolio, collect stars, earn points and unlock exciting achievements!
+              </p>
+            </div>
+            <div class="adventure-banner-actions">
+              <button class="btn btn-secondary btn-adventure-open" id="btn-banner-open-dashboard" aria-label="Open Quest Dashboard">
+                <i class="fa-solid fa-gamepad"></i>
+                <span>Open Quest HUD</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Header -->
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag tag-pink">About Me</span>
+          <h2 class="section-title">Get to Know <span class="highlight-underline pink">Me</span></h2>
+          <p class="section-subtitle">
+            A colourful look into who I am, my core interests, and what drives my journey in Computer Science.
+          </p>
+        </div>
+
+        <!-- 1. Main Introduction Card & Achievement Vault -->
+        <div class="about-grid reveal-on-scroll">
+          <!-- Profile Bio Card with Exact Requested Introduction -->
+          <div class="card about-main-card">
+            <div class="card-header-rainbow"></div>
+            <div class="card-body">
+              <div class="bio-header">
+                <span class="level-indicator">🎮 Level 1 • CS Student</span>
+                <span class="location-badge"><i class="fa-solid fa-graduation-cap"></i> Undergraduate</span>
+              </div>
+              
+              <h3 class="card-title">Passionate Tech Explorer & Future Developer</h3>
+              
+              <!-- Exact requested introduction text -->
+              <p class="about-intro-text">
+                Hi! I'm <strong>Ayisha Diya P</strong>, a Computer Science student who is passionate about exploring technology, learning programming and creating interesting digital experiences. I enjoy discovering new things, improving my problem-solving skills and turning creative ideas into reality. I'm currently developing my skills in web development and programming, and I'm excited to grow as a future developer.
+              </p>
+
+              <!-- Core Highlights Pills -->
+              <div class="about-highlights">
+                <div class="highlight-item">
+                  <span class="highlight-icon icon-yellow">💡</span>
+                  <div>
+                    <strong>Curious Mind:</strong>
+                    <span>Eager to understand how software works under the hood.</span>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon icon-cyan">🎨</span>
+                  <div>
+                    <strong>Creative Frontend:</strong>
+                    <span>Translating logic into cheerful, accessible user interfaces.</span>
+                  </div>
+                </div>
+                <div class="highlight-item">
+                  <span class="highlight-icon icon-purple">🌱</span>
+                  <div>
+                    <strong>Continuous Growth:</strong>
+                    <span>Committed to daily practice, steady learning, and new challenges.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Side Quest Card: Achievement Badges Vault (Stage 5 Enhanced) -->
+          <div class="card achievement-card">
+            <div class="card-body">
+              <div class="achievement-header">
+                <h3 class="card-title"><i class="fa-solid fa-trophy trophy-icon"></i> Achievement Vault</h3>
+                <span class="badge-count" id="vault-badge-count">0 / 5 Unlocked</span>
+              </div>
+              <p class="card-caption">Interact with the portfolio to unlock new explorer badges!</p>
+
+              <div class="badges-grid" id="about-badges-grid">
+                <!-- Badge 1: First Explorer -->
+                <div class="badge-item locked" data-badge="first-explorer" id="badge-about-first-explorer">
+                  <div class="badge-icon-box bg-pink-gradient">
+                    <span>🌟</span>
+                  </div>
+                  <div class="badge-name">First Explorer</div>
+                  <div class="badge-status">Locked</div>
+                </div>
+
+                <!-- Badge 2: Curious Mind -->
+                <div class="badge-item locked" data-badge="curious-mind" id="badge-about-curious-mind">
+                  <div class="badge-icon-box bg-yellow-gradient">
+                    <span>🧠</span>
+                  </div>
+                  <div class="badge-name">Curious Mind</div>
+                  <div class="badge-status">Locked</div>
+                </div>
+
+                <!-- Badge 3: Skill Hunter -->
+                <div class="badge-item locked" data-badge="skill-hunter" id="badge-about-skill-hunter">
+                  <div class="badge-icon-box bg-cyan-gradient">
+                    <span>⚡</span>
+                  </div>
+                  <div class="badge-name">Skill Hunter</div>
+                  <div class="badge-status">Locked</div>
+                </div>
+
+                <!-- Badge 4: Project Explorer -->
+                <div class="badge-item locked" data-badge="project-explorer" id="badge-about-project-explorer">
+                  <div class="badge-icon-box bg-purple-gradient">
+                    <span>🚀</span>
+                  </div>
+                  <div class="badge-name">Project Explorer</div>
+                  <div class="badge-status">Locked</div>
+                </div>
+
+                <!-- Badge 5: Portfolio Master -->
+                <div class="badge-item locked" data-badge="portfolio-master" id="badge-about-portfolio-master">
+                  <div class="badge-icon-box bg-green-gradient">
+                    <span>👑</span>
+                  </div>
+                  <div class="badge-name">Portfolio Master</div>
+                  <div class="badge-status">Locked</div>
+                </div>
+
+                <!-- Bonus Activity Badge: Activity Star -->
+                <div class="badge-item locked" data-badge="activity-star" id="badge-about-activity-star">
+                  <div class="badge-icon-box bg-orange-gradient">
+                    <span>🎯</span>
+                  </div>
+                  <div class="badge-name">Activity Star</div>
+                  <div class="badge-status">Locked</div>
+                </div>
+              </div>
+
+              <div class="vault-footer-tip">
+                <i class="fa-solid fa-lightbulb"></i> Tip: Click on any badge to see its unlock requirement!
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Personal Information Cards (Stage 3 Requirement) -->
+        <div class="personal-cards-section reveal-on-scroll">
+          <h3 class="subsection-title">
+            <span class="subsection-icon">🪪</span> Personal Profile Details
+          </h3>
+          
+          <div class="personal-cards-grid">
+            <!-- Card 1: Name -->
+            <div class="card personal-info-card card-hover-lift border-pink">
+              <div class="personal-card-icon-wrap bg-pink-gradient">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div class="personal-card-content">
+                <span class="personal-card-label">Full Name</span>
+                <h4 class="personal-card-value">Ayisha Diya P</h4>
+              </div>
+            </div>
+
+            <!-- Card 2: Role -->
+            <div class="card personal-info-card card-hover-lift border-cyan">
+              <div class="personal-card-icon-wrap bg-cyan-gradient">
+                <i class="fa-solid fa-graduation-cap"></i>
+              </div>
+              <div class="personal-card-content">
+                <span class="personal-card-label">Current Role</span>
+                <h4 class="personal-card-value">Computer Science Student</h4>
+              </div>
+            </div>
+
+            <!-- Card 3: Field -->
+            <div class="card personal-info-card card-hover-lift border-purple">
+              <div class="personal-card-icon-wrap bg-purple-gradient">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <div class="personal-card-content">
+                <span class="personal-card-label">Academic Field</span>
+                <h4 class="personal-card-value">Computer Science</h4>
+              </div>
+            </div>
+
+            <!-- Card 4: Interests -->
+            <div class="card personal-info-card card-hover-lift border-orange">
+              <div class="personal-card-icon-wrap bg-orange-gradient">
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <div class="personal-card-content">
+                <span class="personal-card-label">Core Interests</span>
+                <h4 class="personal-card-value">Programming, Web Dev & Tech</h4>
+              </div>
+            </div>
+
+            <!-- Card 5: Current Focus -->
+            <div class="card personal-info-card card-hover-lift border-green">
+              <div class="personal-card-icon-wrap bg-green-gradient">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
+              <div class="personal-card-content">
+                <span class="personal-card-label">Current Focus</span>
+                <h4 class="personal-card-value">Learning & Building Projects</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Animated Achievement Number Counters (Stage 3 Requirement) -->
+        <div class="counters-banner-box reveal-on-scroll" id="counters-section">
+          <div class="counters-grid">
+            <!-- Counter 1: Academic Year -->
+            <div class="counter-item">
+              <div class="counter-icon-wrap">
+                <i class="fa-solid fa-calendar-check text-pink"></i>
+              </div>
+              <div class="counter-number-wrap">
+                <span class="counter-number" data-target="1">0</span>
+                <span class="counter-suffix">st Year</span>
+              </div>
+              <span class="counter-label">CS Undergrad</span>
+            </div>
+
+            <!-- Counter 2: Learning Milestones -->
+            <div class="counter-item">
+              <div class="counter-icon-wrap">
+                <i class="fa-solid fa-flag-checkered text-cyan"></i>
+              </div>
+              <div class="counter-number-wrap">
+                <span class="counter-number" data-target="5">0</span>
+                <span class="counter-suffix">+</span>
+              </div>
+              <span class="counter-label">Learning Milestones</span>
+            </div>
+
+            <!-- Counter 3: Dedication & Curiosity -->
+            <div class="counter-item">
+              <div class="counter-icon-wrap">
+                <i class="fa-solid fa-fire-flame-curved text-orange"></i>
+              </div>
+              <div class="counter-number-wrap">
+                <span class="counter-number" data-target="100">0</span>
+                <span class="counter-suffix">%</span>
+              </div>
+              <span class="counter-label">Curiosity & Dedication</span>
+            </div>
+
+            <!-- Counter 4: Practice Hours (Editable Placeholder) -->
+            <div class="counter-item">
+              <div class="counter-icon-wrap">
+                <i class="fa-solid fa-code text-purple"></i>
+              </div>
+              <div class="counter-number-wrap">
+                <span class="counter-number" data-target="150">0</span>
+                <span class="counter-suffix">+</span>
+              </div>
+              <span class="counter-label">Practice Hours (Editable)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Interests Section (Stage 3 Requirement: 5 Cards) -->
+        <div class="interests-section reveal-on-scroll">
+          <div class="section-header-compact">
+            <span class="section-tag tag-cyan">Passions</span>
+            <h3 class="subsection-title-center">Things I Love <span class="highlight-underline cyan">Exploring</span></h3>
+            <p class="section-subtitle-compact">
+              Key domains that spark my curiosity and motivate me to build every day.
+            </p>
+          </div>
+
+          <div class="interests-grid">
+            <!-- Interest 1: Programming -->
+            <div class="card interest-card card-hover-lift">
+              <div class="interest-icon-badge bg-pink-gradient">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h4 class="interest-title">Programming</h4>
+              <p class="interest-desc">
+                Writing clean logic, understanding algorithms, and solving problems systematically through code.
+              </p>
+              <span class="interest-pill tag-pink">Core Logic</span>
+            </div>
+
+            <!-- Interest 2: Web Development -->
+            <div class="card interest-card card-hover-lift">
+              <div class="interest-icon-badge bg-cyan-gradient">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <h4 class="interest-title">Web Development</h4>
+              <p class="interest-desc">
+                Crafting modern, accessible, and colourful web interfaces that are enjoyable and engaging to explore.
+              </p>
+              <span class="interest-pill tag-cyan">Frontend Magic</span>
+            </div>
+
+            <!-- Interest 3: Technology -->
+            <div class="card interest-card card-hover-lift">
+              <div class="interest-icon-badge bg-purple-gradient">
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <h4 class="interest-title">Technology</h4>
+              <p class="interest-desc">
+                Staying curious about software innovations, modern computing tools, and the digital future.
+              </p>
+              <span class="interest-pill tag-purple">Innovation</span>
+            </div>
+
+            <!-- Interest 4: Creative Design -->
+            <div class="card interest-card card-hover-lift">
+              <div class="interest-icon-badge bg-orange-gradient">
+                <i class="fa-solid fa-palette"></i>
+              </div>
+              <h4 class="interest-title">Creative Design</h4>
+              <p class="interest-desc">
+                Harmonizing vibrant rainbow palettes, clean UI/UX structures, and delightful micro-interactions.
+              </p>
+              <span class="interest-pill tag-orange">Aesthetics</span>
+            </div>
+
+            <!-- Interest 5: Problem Solving -->
+            <div class="card interest-card card-hover-lift">
+              <div class="interest-icon-badge bg-green-gradient">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <h4 class="interest-title">Problem Solving</h4>
+              <p class="interest-desc">
+                Tackling computational puzzles, debugging patiently, and breaking problems into simple steps.
+              </p>
+              <span class="interest-pill tag-green">Analytical</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         5. MY SKILLS SECTION (STAGE 4 ENHANCED)
+         Title: My Creative Toolbox
+         Features: Interactive 3D Flip Cards, Category Filtering & Animated Learning Indicators
+         ========================================== -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag tag-cyan">My Creative Toolbox</span>
+          <h2 class="section-title">My Creative <span class="highlight-underline cyan">Toolbox</span></h2>
+          <p class="section-subtitle">
+            Every skill is a new opportunity to create something amazing. Here are the technologies and creative skills I'm exploring and developing.
+          </p>
+        </div>
+
+        <!-- 1. Interactive Category Filter Buttons -->
+        <div class="skills-filter-container reveal-on-scroll" role="toolbar" aria-label="Skill Category Filters">
+          <button class="skill-filter-btn active" data-filter="all">
+            <i class="fa-solid fa-shapes"></i>
+            <span>All Skills (12)</span>
+          </button>
+          <button class="skill-filter-btn" data-filter="programming">
+            <i class="fa-solid fa-code"></i>
+            <span>Programming</span>
+          </button>
+          <button class="skill-filter-btn" data-filter="web">
+            <i class="fa-solid fa-globe"></i>
+            <span>Web Development</span>
+          </button>
+          <button class="skill-filter-btn" data-filter="creative">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>Creative Skills</span>
+          </button>
+        </div>
+
+        <!-- Filter Hint / Interactive Instruction -->
+        <p class="skills-interaction-hint reveal-on-scroll">
+          <i class="fa-solid fa-arrow-pointer"></i> Tip: Click or tap any card to flip it and read more about my learning focus!
+        </p>
+
+        <!-- 2. Interactive 3D Flip Cards Grid -->
+        <div class="skills-flip-grid reveal-on-scroll" id="skills-grid">
+          
+          <!-- ==========================================
+               CATEGORY A: PROGRAMMING LANGUAGES
+               ========================================== -->
+
+          <!-- Skill 1: Python -->
+          <div class="skill-flip-card" data-category="programming" tabindex="0" role="button" aria-expanded="false" aria-label="Flip card for Python">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front border-pink">
+                <span class="card-category-tag tag-pink">Programming</span>
+                <div class="skill-icon-box bg-pink-gradient">
+                  <i class="fa-brands fa-python"></i>
+                </div>
+                <h3 class="skill-card-name">Python</h3>
+                <span class="skill-learning-status">Exploring & Learning</span>
+                <div class="flip-action-hint">
+                  <i class="fa-solid fa-repeat"></i> Click to explore
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back bg-pink-soft">
+                <div class="back-header">
+                  <span class="back-title">Python Focus</span>
+                  <span class="back-icon-mini"><i class="fa-brands fa-python"></i></span>
+                </div>
+                <p class="back-desc">
+                  A high-level, human-readable language ideal for building solid programming logic.
+                </p>
+                <div class="back-detail-box">
+                  <strong>Where it's used:</strong> Problem solving, scripting, and data basics.
+                </div>
+                <div class="back-detail-box">
+                  <strong>My Learning Focus:</strong> Practicing syntax, data structures, and algorithmic puzzles.
+                </div>
+                <div class="flip-back-btn">
+                  <i class="fa-solid fa-rotate-left"></i> Flip back
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 2: JavaScript -->
+          <div class="skill-flip-card" data-category="programming" tabindex="0" role="button" aria-expanded="false" aria-label="Flip card for JavaScript">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front border-yellow">
+                <span class="card-category-tag tag-yellow">Programming</span>
+                <div class="skill-icon-box bg-yellow-gradient">
+                  <i class="fa-brands fa-js"></i>
+                </div>
+                <h3 class="skill-card-name">JavaScript</h3>
+                <span class="skill-learning-status">Active Exploration</span>
+                <div class="flip-action-hint">
+                  <i class="fa-solid fa-repeat"></i> Click to explore
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back bg-yellow-soft">
+                <div class="back-header">
+                  <span class="back-title">JavaScript Focus</span>
+                  <span class="back-icon-mini"><i class="fa-brands fa-js"></i></span>
+                </div>
+                <p class="back-desc">
+                  The dynamic programming language that powers interactive web logic and modern applications.
+                </p>
+                <div class="back-detail-box">
+                  <strong>Where it's used:</strong> Dynamic web features, asynchronous events, and DOM manipulation.
+                </div>
+                <div class="back-detail-box">
+                  <strong>My Learning Focus:</strong> Mastering ES6+ concepts, event handling, and clean functional logic.
+                </div>
+                <div class="flip-back-btn">
+                  <i class="fa-solid fa-rotate-left"></i> Flip back
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 3: C Language -->
+          <div class="skill-flip-card" data-category="programming" tabindex="0" role="button" aria-expanded="false" aria-label="Flip card for C Language">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front border-cyan">
+                <span class="card-category-tag tag-cyan">Programming</span>
+                <div class="skill-icon-box bg-cyan-gradient">
+                  <i class="fa-solid fa-c"></i>
+                </div>
+                <h3 class="skill-card-name">C Language</h3>
+                <span class="skill-learning-status">Core Foundation</span>
+                <div class="flip-action-hint">
+                  <i class="fa-solid fa-repeat"></i> Click to explore
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back bg-cyan-soft">
+                <div class="back-header">
+                  <span class="back-title">C Language Focus</span>
+                  <span class="back-icon-mini"><i class="fa-solid fa-c"></i></span>
+                </div>
+                <p class="back-desc">
+                  A foundational language taught in Computer Science that reveals how computers handle memory.
+                </p>
+                <div class="back-detail-box">
+                  <strong>Where it's used:</strong> System programming, embedded logic, and foundational CS concepts.
+                </div>
+                <div class="back-detail-box">
+                  <strong>My Learning Focus:</strong> Pointers, structures, memory allocation, and structured syntax.
+                </div>
+                <div class="flip-back-btn">
+                  <i class="fa-solid fa-rotate-left"></i> Flip back
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 4: Java -->
+          <div class="skill-flip-card" data-category="programming" tabindex="0" role="button" aria-expanded="false" aria-label="Flip card for Java">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front border-orange">
+                <span class="card-category-tag tag-orange">Programming</span>
+                <div class="skill-icon-box bg-orange-gradient">
+                  <i class="fa-brands fa-java"></i>
+                </div>
+                <h3 class="skill-card-name">Java</h3>
+                <span class="skill-learning-status">Foundational OOP</span>
+                <div class="flip-action-hint">
+                  <i class="fa-solid fa-repeat"></i> Click to explore
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back bg-orange-soft">
+                <div class="back-header">
+                  <span class="back-title">Java Focus</span>
+                  <span class="back-icon-mini"><i class="fa-brands fa-java"></i></span>
+                </div>
+                <p class="back-desc">
+                  A robust object-oriented programming language designed for platform-independent development.
+                </p>
+                <div class="back-detail-box">
+                  <strong>Where it's used:</strong> Enterprise software, Android ecosystem, and academic CS courses.
+                </div>
+                <div class="back-detail-box">
+                  <strong>My Learning Focus:</strong> Object-Oriented Programming (OOP), classes, objects, and modular design.
+                </div>
+                <div class="flip-back-btn">
+                  <i class="fa-solid fa-rotate-left"></i> Flip back
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================================
+               CATEGORY B: WEB DEVELOPMENT
+               ========================================== -->
+
+          <!-- Skill 5: HTML -->
+          <div class="skill-flip-card" data-category="web" tabindex="0" role="button" aria-expanded="false" aria-label="Flip card for HTML5">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front border-pink">
+                <span class="card-category-tag tag-pink">Web Development</span>
+                <div class="skill-icon-box bg-pink-gradient">
+                  <i class="fa-brands fa-html5"></i>
+                </div>
+                <h3 class="skill-card-name">HTML5</h3>
+                <span class="skill-learning-status">Semantic Markup</span>
+                <div class="flip-action-hint">
+                  <i class="fa-solid fa-repeat"></i> Click to explore
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back bg-pink-soft">
+                <div class="back-header">
+                  <span class="back-title">HTML5 Focus</span>
+                  <span class="back-icon-mini"><i class="fa-brands fa-html5"></i></span>
+                </div>
+                <p class="back-desc">
+                  The backbone of the World Wide Web, structuring accessible and meaningful web content.
+                </p>
+                <div class="back-detail-box">
+                  <strong>Where it's used:</strong> Page architecture, SEO, semantics, and accessible web standards.
+                </div>
+                <div class="back-detail-box">
+                  <strong>My Learning Focus:</strong> Semantic tags, ARIA accessibility attributes, and clean document structure.
+                </div>
+                <div class="flip-back-btn">
+                  <i class="fa-solid fa-rotate-left"></i> Flip back
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 6: CSS -->
+          <div class="skill-flip-card" data-category="web" tabindex="0" role="button" aria-expanded="false" aria-label="Flip card for CSS3">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front border-purple">
+                <span class="card-category-tag tag-purple">Web Development</span>
+                <div class="skill-icon-box bg-purple-gradient">
+                  <i class="fa-brands fa-css3-alt"></i>
+                </div>
+                <h3 class="skill-card-name">CSS3</h3>
+                <span class="skill-learning-status">Styling & Motion</span>
+                <div class="flip-action-hint">
+                  <i class="fa-solid fa-repeat"></i> Click to explore
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back bg-purple-soft">
+                <div class="back-header">
+                  <span class="back-title">CSS3 Focus</span>
+                  <span class="back-icon-mini"><i class="fa-brands fa-css3-alt"></i></span>
+                </div>
+                <p class="back-desc">
+                  The language of design that gives websites color, modern layout, typography, and motion.
+                </p>
+                <div class="back-detail-box">
+                  <strong>Where it's used:</strong> Flexbox, CSS Grid, keyframe animations, and custom CSS variables.
+                </div>
+                <div class="back-detail-box">
+                  <strong>My Learning Focus:</strong> Modern responsive layouts, smooth micro-interactions, and gradient aesthetics.
+                </div>
+                <div class="flip-back-btn">
+                  <i class="fa-solid fa-rotate-left"></i> Flip back
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 7: JavaScript (Web Development) -->
+          <div class="skill-flip-card" data-category="web" tabindex="0" role="button" aria-expanded="false" aria-label="Flip card for JS Web Interactivity">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front border-cyan">
+                <span class="card-category-tag tag-cyan">Web Development</span>
+                <div class="skill-icon-box bg-cyan-gradient">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3 class="skill-card-name">JS Web Interactivity</h3>
+                <span class="skill-learning-status">Interactive UI</span>
+                <div class="flip-action-hint">
+                  <i class="fa-solid fa-repeat"></i> Click to explore
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back bg-cyan-soft">
+                <div class="back-header">
+                  <span class="back-title">Interactivity Focus</span>
+                  <span class="back-icon-mini"><i class="fa-solid fa-laptop-code"></i></span>
+                </div>
+                <p class="back-desc">
+                  Connecting visitor interactions to instant visual responses in the browser without reloads.
+                </p>
+                <div class="back-detail-box">
+                  <strong>Where it's used:</strong> Dynamic cards, scroll progress, filters, and mini-game mechanics.
+                </div>
+                <div class="back-detail-box">
+                  <strong>My Learning Focus:</strong> DOM event listeners, class manipulation, and clean vanilla JS scripts.
+                </div>
+                <div class="flip-back-btn">
+                  <i class="fa-solid fa-rotate-left"></i> Flip back
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 8: Responsive Web Design -->
+          <div class="skill-flip-card" data-category="web" tabindex="0" role="button" aria-expanded="false" aria-label="Flip card for Responsive Web Design">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front border-green">
+                <span class="card-category-tag tag-green">Web Development</span>
+                <div class="skill-icon-box bg-green-gradient">
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <h3 class="skill-card-name">Responsive Design</h3>
+                <span class="skill-learning-status">Cross-Device UX</span>
+                <div class="flip-action-hint">
+                  <i class="fa-solid fa-repeat"></i> Click to explore
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back bg-green-soft">
+                <div class="back-header">
+                  <span class="back-title">Responsive Focus</span>
+                  <span class="back-icon-mini"><i class="fa-solid fa-mobile-screen-button"></i></span>
+                </div>
+                <p class="back-desc">
+                  Ensuring websites adapt seamlessly to smartphones, tablets, laptops, and ultra-wide screens.
+                </p>
+                <div class="back-detail-box">
+                  <strong>Where it's used:</strong> CSS media queries, responsive grids, flexible typography, touch UI.
+                </div>
+                <div class="back-detail-box">
+                  <strong>My Learning Focus:</strong> Mobile-first thinking, touch targets, and fluid layout scaling.
+                </div>
+                <div class="flip-back-btn">
+                  <i class="fa-solid fa-rotate-left"></i> Flip back
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==========================================
+               CATEGORY C: CREATIVE AND OTHER SKILLS
+               ========================================== -->
+
+          <!-- Skill 9: Graphic Design -->
+          <div class="skill-flip-card" data-category="creative" tabindex="0" role="button" aria-expanded="false" aria-label="Flip card for Graphic Design">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front border-pink">
+                <span class="card-category-tag tag-pink">Creative Skills</span>
+                <div class="skill-icon-box bg-pink-gradient">
+                  <i class="fa-solid fa-pen-nib"></i>
+                </div>
+                <h3 class="skill-card-name">Graphic Design</h3>
+                <span class="skill-learning-status">Visual Harmony</span>
+                <div class="flip-action-hint">
+                  <i class="fa-solid fa-repeat"></i> Click to explore
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back bg-pink-soft">
+                <div class="back-header">
+                  <span class="back-title">Graphic Design Focus</span>
+                  <span class="back-icon-mini"><i class="fa-solid fa-pen-nib"></i></span>
+                </div>
+                <p class="back-desc">
+                  The art of visual storytelling using color harmony, typography balance, and composition.
+                </p>
+                <div class="back-detail-box">
+                  <strong>Where it's used:</strong> Portfolio branding, banner graphics, icon systems, and digital art.
+                </div>
+                <div class="back-detail-box">
+                  <strong>My Learning Focus:</strong> Colour theory, contrast principles, and visual layout balancing.
+                </div>
+                <div class="flip-back-btn">
+                  <i class="fa-solid fa-rotate-left"></i> Flip back
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 10: UI/UX Design -->
+          <div class="skill-flip-card" data-category="creative" tabindex="0" role="button" aria-expanded="false" aria-label="Flip card for UI/UX Design">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front border-cyan">
+                <span class="card-category-tag tag-cyan">Creative Skills</span>
+                <div class="skill-icon-box bg-cyan-gradient">
+                  <i class="fa-solid fa-shapes"></i>
+                </div>
+                <h3 class="skill-card-name">UI/UX Design</h3>
+                <span class="skill-learning-status">User Centered</span>
+                <div class="flip-action-hint">
+                  <i class="fa-solid fa-repeat"></i> Click to explore
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back bg-cyan-soft">
+                <div class="back-header">
+                  <span class="back-title">UI/UX Focus</span>
+                  <span class="back-icon-mini"><i class="fa-solid fa-shapes"></i></span>
+                </div>
+                <p class="back-desc">
+                  Designing intuitive digital experiences that are effortless to navigate and pleasant to use.
+                </p>
+                <div class="back-detail-box">
+                  <strong>Where it's used:</strong> Wireframes, design systems, visual hierarchy, user journey mapping.
+                </div>
+                <div class="back-detail-box">
+                  <strong>My Learning Focus:</strong> Intuitive navigation, accessibility, and micro-interaction design.
+                </div>
+                <div class="flip-back-btn">
+                  <i class="fa-solid fa-rotate-left"></i> Flip back
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 11: Problem Solving -->
+          <div class="skill-flip-card" data-category="creative" tabindex="0" role="button" aria-expanded="false" aria-label="Flip card for Problem Solving">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front border-green">
+                <span class="card-category-tag tag-green">Creative Skills</span>
+                <div class="skill-icon-box bg-green-gradient">
+                  <i class="fa-solid fa-puzzle-piece"></i>
+                </div>
+                <h3 class="skill-card-name">Problem Solving</h3>
+                <span class="skill-learning-status">Logic & Debugging</span>
+                <div class="flip-action-hint">
+                  <i class="fa-solid fa-repeat"></i> Click to explore
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back bg-green-soft">
+                <div class="back-header">
+                  <span class="back-title">Problem Solving Focus</span>
+                  <span class="back-icon-mini"><i class="fa-solid fa-puzzle-piece"></i></span>
+                </div>
+                <p class="back-desc">
+                  The core superpower of computer science: decomposing complex challenges into logical steps.
+                </p>
+                <div class="back-detail-box">
+                  <strong>Where it's used:</strong> Code debugging, algorithmic thinking, and structural decision-making.
+                </div>
+                <div class="back-detail-box">
+                  <strong>My Learning Focus:</strong> Systematic debugging, algorithmic exercises, and patience.
+                </div>
+                <div class="flip-back-btn">
+                  <i class="fa-solid fa-rotate-left"></i> Flip back
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 12: Creative Thinking -->
+          <div class="skill-flip-card" data-category="creative" tabindex="0" role="button" aria-expanded="false" aria-label="Flip card for Creative Thinking">
+            <div class="flip-card-inner">
+              <!-- Front Side -->
+              <div class="flip-card-front border-orange">
+                <span class="card-category-tag tag-orange">Creative Skills</span>
+                <div class="skill-icon-box bg-orange-gradient">
+                  <i class="fa-solid fa-lightbulb"></i>
+                </div>
+                <h3 class="skill-card-name">Creative Thinking</h3>
+                <span class="skill-learning-status">Idea Generation</span>
+                <div class="flip-action-hint">
+                  <i class="fa-solid fa-repeat"></i> Click to explore
+                </div>
+              </div>
+              <!-- Back Side -->
+              <div class="flip-card-back bg-orange-soft">
+                <div class="back-header">
+                  <span class="back-title">Creative Thinking Focus</span>
+                  <span class="back-icon-mini"><i class="fa-solid fa-lightbulb"></i></span>
+                </div>
+                <p class="back-desc">
+                  Bringing imagination into technology to create digital playgrounds that surprise and delight.
+                </p>
+                <div class="back-detail-box">
+                  <strong>Where it's used:</strong> Brainstorming features, gamified concepts, and inventive projects.
+                </div>
+                <div class="back-detail-box">
+                  <strong>My Learning Focus:</strong> Combining arts and technology to craft friendly user experiences.
+                </div>
+                <div class="flip-back-btn">
+                  <i class="fa-solid fa-rotate-left"></i> Flip back
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- End skills-flip-grid -->
+
+        <!-- ========================================================
+             3. ANIMATED SKILL INDICATORS (STAGE 4 REQUIREMENT 5)
+             Visual learning development tracks with editable placeholder values
+             ======================================================== -->
+        <div class="skill-progress-section reveal-on-scroll" id="skill-progress-section">
+          <div class="section-header-compact">
+            <span class="section-tag tag-purple">Active Growth</span>
+            <h3 class="subsection-title-center">Learning Progress <span class="highlight-underline purple">Tracker</span></h3>
+            <p class="section-subtitle-compact">
+              A transparent view of the learning paths I am actively exploring during my CS studies.
+            </p>
+          </div>
+
+          <!-- ========================================================
+               EDITABLE LEARNING PROGRESS VALUES:
+               To update your progress, simply change the data-progress value (e.g. data-progress="80")
+               The animated bar and percentage text will automatically update!
+               ======================================================== -->
+          <div class="progress-track-grid">
+            <!-- Track 1: Programming Foundations -->
+            <div class="card progress-track-card">
+              <div class="progress-track-header">
+                <div class="track-title-wrap">
+                  <span class="track-icon bg-pink-gradient"><i class="fa-solid fa-code"></i></span>
+                  <div>
+                    <h4 class="track-name">Programming Foundations</h4>
+                    <span class="track-caption">Python & C language logic building</span>
+                  </div>
+                </div>
+                <span class="track-pct-display" id="pct-display-1">70%</span>
+              </div>
+              <div class="skill-progress-bar-wrap">
+                <div class="skill-progress-fill bar-pink-fill" data-progress="70" style="width: 0%;"></div>
+              </div>
+              <span class="track-status-pill">Active University Coursework</span>
+            </div>
+
+            <!-- Track 2: Web Frontend Essentials -->
+            <div class="card progress-track-card">
+              <div class="progress-track-header">
+                <div class="track-title-wrap">
+                  <span class="track-icon bg-purple-gradient"><i class="fa-solid fa-globe"></i></span>
+                  <div>
+                    <h4 class="track-name">Web Frontend Essentials</h4>
+                    <span class="track-caption">Semantic HTML5 & modern CSS3 layouts</span>
+                  </div>
+                </div>
+                <span class="track-pct-display" id="pct-display-2">80%</span>
+              </div>
+              <div class="skill-progress-bar-wrap">
+                <div class="skill-progress-fill bar-purple-fill" data-progress="80" style="width: 0%;"></div>
+              </div>
+              <span class="track-status-pill">Hands-on Portfolio Building</span>
+            </div>
+
+            <!-- Track 3: JavaScript & DOM Logic -->
+            <div class="card progress-track-card">
+              <div class="progress-track-header">
+                <div class="track-title-wrap">
+                  <span class="track-icon bg-cyan-gradient"><i class="fa-solid fa-laptop-code"></i></span>
+                  <div>
+                    <h4 class="track-name">JavaScript & DOM Logic</h4>
+                    <span class="track-caption">Event handlers, 3D flips & interactivity</span>
+                  </div>
+                </div>
+                <span class="track-pct-display" id="pct-display-3">65%</span>
+              </div>
+              <div class="skill-progress-bar-wrap">
+                <div class="skill-progress-fill bar-cyan-fill" data-progress="65" style="width: 0%;"></div>
+              </div>
+              <span class="track-status-pill">Developing Interactive Features</span>
+            </div>
+
+            <!-- Track 4: Creative UI/UX & Problem Solving -->
+            <div class="card progress-track-card">
+              <div class="progress-track-header">
+                <div class="track-title-wrap">
+                  <span class="track-icon bg-green-gradient"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                  <div>
+                    <h4 class="track-name">Creative UI/UX & Problem Solving</h4>
+                    <span class="track-caption">Design harmony & structured debugging</span>
+                  </div>
+                </div>
+                <span class="track-pct-display" id="pct-display-4">85%</span>
+              </div>
+              <div class="skill-progress-bar-wrap">
+                <div class="skill-progress-fill bar-green-fill" data-progress="85" style="width: 0%;"></div>
+              </div>
+              <span class="track-status-pill">Creative Code Exploration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         6. MY PROJECTS SECTION
+         Colourful Project Cards with Tags & Links
+         ========================================== -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag tag-purple">Completed Quests</span>
+          <h2 class="section-title">Featured <span class="highlight-underline purple">Projects</span></h2>
+          <p class="section-subtitle">
+            Hands-on work where I combine code, design, and experimentation to build functional things.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Rainbow Portfolio -->
+          <div class="card project-card">
+            <div class="project-banner banner-rainbow">
+              <div class="banner-badge">Active Quest</div>
+              <div class="banner-emoji">🌈</div>
+            </div>
+            <div class="card-body">
+              <div class="project-tags">
+                <span class="tag-badge tag-pink">HTML5</span>
+                <span class="tag-badge tag-purple">CSS3</span>
+                <span class="tag-badge tag-yellow">JavaScript</span>
+              </div>
+              <h3 class="project-title">Rainbow Creative Portfolio</h3>
+              <p class="project-desc">
+                An interactive, colourful personal portfolio featuring a digital playground theme, XP tracking, and game-inspired sections.
+              </p>
+              <div class="project-links">
+                <a href="#home" class="btn-project-link primary">
+                  <i class="fa-solid fa-play"></i> Live Experience
+                </a>
+                <a href="#about" class="btn-project-link secondary">
+                  <i class="fa-solid fa-code"></i> Stage 1 Built
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Mini Game Arena -->
+          <div class="card project-card">
+            <div class="project-banner banner-cyan">
+              <div class="banner-badge">In Development</div>
+              <div class="banner-emoji">🎮</div>
+            </div>
+            <div class="card-body">
+              <div class="project-tags">
+                <span class="tag-badge tag-cyan">Vanilla JS</span>
+                <span class="tag-badge tag-orange">Game Dev</span>
+                <span class="tag-badge tag-green">Logic</span>
+              </div>
+              <h3 class="project-title">Web Mini-Games Arcade</h3>
+              <p class="project-desc">
+                A collection of beginner-friendly web games including a Color Reflex Sprint and CS Quiz Challenge to test visitors' wits.
+              </p>
+              <div class="project-links">
+                <a href="#games" class="btn-project-link primary">
+                  <i class="fa-solid fa-gamepad"></i> Check Preview
+                </a>
+                <span class="status-coming-soon">Coming in Stage 2</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Student Study & Task Quest -->
+          <div class="card project-card">
+            <div class="project-banner banner-green">
+              <div class="banner-badge">Concept Quest</div>
+              <div class="banner-emoji">📚</div>
+            </div>
+            <div class="card-body">
+              <div class="project-tags">
+                <span class="tag-badge tag-green">Productivity</span>
+                <span class="tag-badge tag-blue">CSS Grid</span>
+                <span class="tag-badge tag-violet">DOM API</span>
+              </div>
+              <h3 class="project-title">Student Study Companion</h3>
+              <p class="project-desc">
+                A playful daily planner designed for first-year CS students to track coding practice, assignments, and study streaks.
+              </p>
+              <div class="project-links">
+                <a href="#contact" class="btn-project-link primary">
+                  <i class="fa-solid fa-lightbulb"></i> Roadmap
+                </a>
+                <span class="status-coming-soon">Planning Phase</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         7. MY JOURNEY SECTION (STAGE 3 ENHANCED)
+         Part 1: Education Journey Timeline
+         Part 2: My Learning Journey Milestones
+         ========================================== -->
+    <section class="section journey-section" id="journey">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal-on-scroll">
+          <span class="section-tag tag-green">The Adventure</span>
+          <h2 class="section-title">My Journey & <span class="highlight-underline green">Milestones</span></h2>
+          <p class="section-subtitle">
+            From foundational school curiosities to undergraduate studies and hands-on coding milestones.
+          </p>
+        </div>
+
+        <!-- ========================================================
+             SUBSECTION A: EDUCATION JOURNEY TIMELINE (Requirement 4)
+             Animated vertical timeline with colourful markers & connecting lines
+             ======================================================== -->
+        <div class="timeline-wrapper reveal-on-scroll">
+          <div class="timeline-header-box">
+            <span class="subsection-icon">🎓</span>
+            <h3 class="subsection-title">Education Journey Roadmap</h3>
+            <p class="subsection-desc">
+              My formal academic pathway, current computer science studies, and future aspirations.
+            </p>
+          </div>
+
+          <div class="journey-timeline">
+            <!-- Timeline Item 1: School Education (Placeholder) -->
+            <div class="timeline-item reveal-on-scroll">
+              <div class="timeline-marker marker-pink">
+                <span>01</span>
+              </div>
+              <div class="timeline-card card card-hover-lift">
+                <div class="card-body">
+                  <div class="timeline-meta">
+                    <span class="timeline-date">[Year - Year]</span>
+                    <span class="timeline-badge-pill tag-pink">🏫 Schooling</span>
+                  </div>
+                  <h4 class="timeline-heading">Foundational School Education</h4>
+                  <p class="timeline-institution">
+                    <i class="fa-solid fa-school"></i> <strong>[Your School / High School Name]</strong>
+                  </p>
+                  <p class="timeline-text">
+                    Completed primary and higher secondary education with a strong passion for mathematics, logical reasoning, and early science exploration. Built the curiosity that led me to choose Computer Science.
+                  </p>
+                  <div class="timeline-status-tag achieved">
+                    <i class="fa-solid fa-circle-check"></i> Foundation Completed
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 2: Undergraduate Studies (Current) -->
+            <div class="timeline-item reveal-on-scroll">
+              <div class="timeline-marker marker-cyan">
+                <span>02</span>
+              </div>
+              <div class="timeline-card card card-hover-lift current-study-card">
+                <div class="card-body">
+                  <div class="timeline-meta">
+                    <span class="timeline-date">Year 1 • Current / Ongoing</span>
+                    <span class="timeline-badge-pill tag-cyan">🎓 Undergraduate</span>
+                  </div>
+                  <h4 class="timeline-heading">Bachelor's Degree in Computer Science</h4>
+                  <p class="timeline-institution">
+                    <i class="fa-solid fa-university"></i> <strong>[Your College / University Name]</strong>
+                  </p>
+                  <p class="timeline-text">
+                    Currently pursuing first-year Computer Science undergraduate studies. Exploring programming logic, data fundamentals, computational problem-solving, and web development technologies.
+                  </p>
+                  <div class="timeline-status-tag ongoing">
+                    <span class="status-dot-pulse"></span> In Active Progress
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Timeline Item 3: Future Learning Goals -->
+            <div class="timeline-item reveal-on-scroll">
+              <div class="timeline-marker marker-violet">
+                <span>03</span>
+              </div>
+              <div class="timeline-card card card-hover-lift future-milestone">
+                <div class="card-body">
+                  <div class="timeline-meta">
+                    <span class="timeline-date">Upcoming Horizons</span>
+                    <span class="timeline-badge-pill tag-purple">🚀 Future Goals</span>
+                  </div>
+                  <h4 class="timeline-heading">Advanced Software Engineering & Specialization</h4>
+                  <p class="timeline-institution">
+                    <i class="fa-solid fa-compass"></i> <strong>Lifelong Learning & Tech Specialization</strong>
+                  </p>
+                  <p class="timeline-text">
+                    Aiming to master full-stack web applications, contribute to open-source student communities, build useful software tools, and excel in future developer roles.
+                  </p>
+                  <div class="timeline-status-tag goal">
+                    <i class="fa-solid fa-star"></i> Future Learning Goal
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================================================
+             SUBSECTION B: MY LEARNING JOURNEY (Requirement 5)
+             Milestones: Exploring programming, Web Dev, Projects,
+             Problem Solving & New Tech
+             ======================================================== -->
+        <div class="learning-journey-wrapper reveal-on-scroll">
+          <div class="section-header-compact">
+            <span class="section-tag tag-purple">Hands-On Milestones</span>
+            <h3 class="subsection-title-center">My Learning <span class="highlight-underline purple">Journey</span></h3>
+            <p class="section-subtitle-compact">
+              Key developmental milestones I have achieved and continue practicing on my path as a coder.
+            </p>
+          </div>
+
+          <div class="learning-grid">
+            <!-- Milestone 1 -->
+            <div class="card learning-card card-hover-lift">
+              <div class="learning-step-badge bg-pink-gradient">01</div>
+              <div class="learning-icon-box bg-pink-gradient">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <h4 class="learning-title">Started Exploring Programming</h4>
+              <p class="learning-desc">
+                Wrote my very first lines of code, discovered core computational logic, and learned the power of loops, conditionals, and variables.
+              </p>
+              <div class="learning-tag-wrap">
+                <span class="tag-badge tag-pink">First Step</span>
+                <span class="tag-badge tag-orange">Logic Basics</span>
+              </div>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="card learning-card card-hover-lift">
+              <div class="learning-step-badge bg-orange-gradient">02</div>
+              <div class="learning-icon-box bg-orange-gradient">
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <h4 class="learning-title">Began Learning Web Development</h4>
+              <p class="learning-desc">
+                Explored semantic HTML5, modern CSS3 layouts (Flexbox & Grid), and responsive design principles to bring web pages to life.
+              </p>
+              <div class="learning-tag-wrap">
+                <span class="tag-badge tag-orange">HTML5 / CSS3</span>
+                <span class="tag-badge tag-yellow">Responsive UI</span>
+              </div>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="card learning-card card-hover-lift">
+              <div class="learning-step-badge bg-yellow-gradient">03</div>
+              <div class="learning-icon-box bg-yellow-gradient">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+              </div>
+              <h4 class="learning-title">Started Building Personal Projects</h4>
+              <p class="learning-desc">
+                Put theory into practice by creating hands-on projects, including this interactive rainbow portfolio and digital study companions.
+              </p>
+              <div class="learning-tag-wrap">
+                <span class="tag-badge tag-yellow">Portfolio</span>
+                <span class="tag-badge tag-green">Creative Apps</span>
+              </div>
+            </div>
+
+            <!-- Milestone 4 -->
+            <div class="card learning-card card-hover-lift">
+              <div class="learning-step-badge bg-green-gradient">04</div>
+              <div class="learning-icon-box bg-green-gradient">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+              <h4 class="learning-title">Improving Problem-Solving Skills</h4>
+              <p class="learning-desc">
+                Practicing algorithmic puzzles, structuring step-by-step solutions, and adopting a patient, systematic debugging mindset.
+              </p>
+              <div class="learning-tag-wrap">
+                <span class="tag-badge tag-green">Algorithms</span>
+                <span class="tag-badge tag-cyan">Debugging</span>
+              </div>
+            </div>
+
+            <!-- Milestone 5 -->
+            <div class="card learning-card card-hover-lift">
+              <div class="learning-step-badge bg-cyan-gradient">05</div>
+              <div class="learning-icon-box bg-cyan-gradient">
+                <i class="fa-solid fa-rocket"></i>
+              </div>
+              <h4 class="learning-title">Exploring New Technologies</h4>
+              <p class="learning-desc">
+                Diving into vanilla JavaScript DOM interactivity, Git version control on GitHub, and exploring modern developer tools.
+              </p>
+              <div class="learning-tag-wrap">
+                <span class="tag-badge tag-cyan">JavaScript</span>
+                <span class="tag-badge tag-purple">Git & Tools</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         8. MINI GAMES SECTION
+         Game Arena Preview & Stage 2 Preparation
+         ========================================== -->
+    <section class="section games-section" id="games">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag tag-yellow">The Arcade</span>
+          <h2 class="section-title">Mini Games <span class="highlight-underline yellow">Arena</span></h2>
+          <p class="section-subtitle">
+            A playful zone prepared for interactive games, challenges, and unlockable rewards!
+          </p>
+        </div>
+
+        <!-- Arcade Teaser Banner -->
+        <div class="arcade-banner-box">
+          <div class="arcade-banner-content">
+            <div class="arcade-icon-badge">🕹️</div>
+            <div>
+              <h3 class="arcade-banner-title">Welcome to the Arcade Zone!</h3>
+              <p class="arcade-banner-text">
+                This section is built as the foundation for fun, interactive mini-games coming in our upcoming development stages. Try clicking the challenge cards below to earn your first exploration bonus!
+              </p>
+            </div>
+          </div>
+          <button class="btn btn-primary" id="btn-demo-xp">
+            <i class="fa-solid fa-sparkles"></i> Claim 20 Visitor XP
+          </button>
+        </div>
+
+        <div class="games-grid">
+          <!-- Game Teaser 1 -->
+          <div class="card game-teaser-card" data-game="color-catch">
+            <div class="game-teaser-header bg-pink-gradient">
+              <span class="game-teaser-icon">🎯</span>
+              <span class="game-status-tag">Coming Stage 2</span>
+            </div>
+            <div class="card-body">
+              <h3 class="game-title">Rainbow Color Catch</h3>
+              <p class="game-desc">
+                A reflex-based mini game: catch the matching rainbow colors before the timer runs out to climb the high score board!
+              </p>
+              <div class="game-meta">
+                <span>⏱️ Quick Reflexes</span>
+                <span>⭐ +50 XP Reward</span>
+              </div>
+              <button class="btn-game-preview" data-name="Rainbow Color Catch">
+                <span>Preview Quest</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Game Teaser 2 -->
+          <div class="card game-teaser-card" data-game="cs-quiz">
+            <div class="game-teaser-header bg-cyan-gradient">
+              <span class="game-teaser-icon">🧠</span>
+              <span class="game-status-tag">Coming Stage 2</span>
+            </div>
+            <div class="card-body">
+              <h3 class="game-title">CS Freshman Trivia</h3>
+              <p class="game-desc">
+                Test your basic knowledge of binary numbers, programming history, and computer science trivia in a 5-question speed quiz.
+              </p>
+              <div class="game-meta">
+                <span>🧩 Logic & Trivia</span>
+                <span>⭐ +75 XP Reward</span>
+              </div>
+              <button class="btn-game-preview" data-name="CS Freshman Trivia">
+                <span>Preview Quest</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Game Teaser 3 -->
+          <div class="card game-teaser-card" data-game="card-flip">
+            <div class="game-teaser-header bg-purple-gradient">
+              <span class="game-teaser-icon">🃏</span>
+              <span class="game-status-tag">Coming Stage 2</span>
+            </div>
+            <div class="card-body">
+              <h3 class="game-title">Memory Syntax Match</h3>
+              <p class="game-desc">
+                Flip and pair tech icons (Python, HTML, CSS, JS) to clear the board in the fewest moves possible.
+              </p>
+              <div class="game-meta">
+                <span>🔍 Memory Focus</span>
+                <span>⭐ +100 XP Reward</span>
+              </div>
+              <button class="btn-game-preview" data-name="Memory Syntax Match">
+                <span>Preview Quest</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         9. CONTACT SECTION
+         Colourful Contact Card, Socials & Message Form
+         ========================================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag tag-pink">Let's Connect</span>
+          <h2 class="section-title">Send a <span class="highlight-underline pink">Friendly Hello</span></h2>
+          <p class="section-subtitle">
+            Whether you want to discuss a project, share student advice, or just connect, my inbox is always open!
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Information & Socials -->
+          <div class="card contact-info-card">
+            <div class="card-body">
+              <h3 class="card-title">Get in Touch 📬</h3>
+              <p class="contact-intro">
+                I'm always excited to meet fellow students, developers, and mentors. Let's build something colorful together!
+              </p>
+
+              <div class="contact-methods">
+                <div class="method-item">
+                  <div class="method-icon-box bg-pink-gradient">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div>
+                    <span class="method-label">Email Me</span>
+                    <a href="mailto:ayishadiya@example.com" class="method-value">ayishadiya@example.com</a>
+                  </div>
+                </div>
+
+                <div class="method-item">
+                  <div class="method-icon-box bg-cyan-gradient">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <span class="method-label">Role</span>
+                    <span class="method-value">First-Year Computer Science Student</span>
+                  </div>
+                </div>
+
+                <div class="method-item">
+                  <div class="method-icon-box bg-green-gradient">
+                    <i class="fa-solid fa-comments"></i>
+                  </div>
+                  <div>
+                    <span class="method-label">Response Time</span>
+                    <span class="method-value">Friendly & Prompt</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social Media Links -->
+              <div class="social-channels">
+                <h4 class="social-title">Connect with me:</h4>
+                <div class="social-buttons">
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn github" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn linkedin" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                  <a href="mailto:ayishadiya@example.com" class="social-btn email" aria-label="Email">
+                    <i class="fa-solid fa-paper-plane"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Contact Form -->
+          <div class="card contact-form-card">
+            <div class="card-body">
+              <h3 class="card-title">Drop a Message 💬</h3>
+              <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                  <label for="name" class="form-label">Your Name</label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Maya Chen" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="email" class="form-label">Your Email</label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="e.g. maya@example.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input type="text" id="subject" name="subject" class="form-input" placeholder="Hello / Project Collaboration / Advice" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">Your Message</label>
+                  <textarea id="message" name="message" rows="4" class="form-input form-textarea" placeholder="Write your friendly note here..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-submit">
+                  <span>Send Quest Message</span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                </button>
+                <div id="form-feedback" class="form-feedback" aria-live="polite"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       10. FOOTER
+       Colourful rainbow line, copyright & back-to-top
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="rainbow-stripe-divider"></div>
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-logo">
+          <span class="footer-logo-badge">AD</span>
+          <span class="footer-title">Ayisha Diya P</span>
+        </div>
+        <p class="footer-text">
+          Designed & coded with <span class="heart-pulse">💖</span> and <span class="rainbow-text">rainbow imagination</span> by a passionate first-year CS student.
+        </p>
+      </div>
+
+      <div class="footer-center">
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#games">Games</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <a href="#home" class="back-to-top-btn" aria-label="Back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p class="copyright-text">
+          &copy; <span id="current-year">2026</span> Ayisha Diya P. Stage 1 Rainbow Creative Portfolio.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       STAGE 5: FLOATING QUEST HUD BUTTON
+       Allows visitors to access the dashboard anytime
+       ========================================== -->
+  <button class="floating-quest-btn" id="floating-quest-btn" aria-label="Open Portfolio Adventure Dashboard" title="Open Your Portfolio Adventure">
+    <span class="quest-btn-icon">🎮</span>
+    <span class="quest-btn-text">Quest HUD</span>
+    <span class="quest-btn-stars" id="float-stars-count">0/5 ⭐</span>
+  </button>
+
+  <!-- ==========================================
+       STAGE 5: GAME DASHBOARD (MODAL / SLIDE DRAWER)
+       Live points, stars, section progress, achievements & reset
+       ========================================== -->
+  <div class="dashboard-modal-backdrop" id="dashboard-modal" aria-hidden="true" role="dialog" aria-labelledby="dashboard-modal-title">
+    <div class="dashboard-modal-dialog">
+      <!-- Modal Header -->
+      <div class="dashboard-modal-header">
+        <div class="dashboard-title-wrap">
+          <span class="dashboard-icon">🎮</span>
+          <div>
+            <h3 class="dashboard-title" id="dashboard-modal-title">Your Portfolio Adventure</h3>
+            <span class="dashboard-subtitle">Explore, collect stars & unlock achievements!</span>
+          </div>
+        </div>
+        <button class="dashboard-close-btn" id="dashboard-close-btn" aria-label="Close Quest Dashboard">&times;</button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="dashboard-modal-body">
+        <!-- Exploration Progress Card -->
+        <div class="dashboard-progress-card">
+          <div class="progress-info-row">
+            <span class="progress-label"><i class="fa-solid fa-compass"></i> Unique Portfolio Exploration</span>
+            <span class="progress-percent-val" id="dashboard-progress-percent">0%</span>
+          </div>
+          <div class="dashboard-progress-track">
+            <div class="dashboard-progress-fill" id="dashboard-progress-fill" style="width: 0%;"></div>
+          </div>
+          <span class="progress-caption" id="dashboard-progress-caption">0 of 5 unique sections explored</span>
+        </div>
+
+        <!-- 4 Live Stat Cards Grid -->
+        <div class="dashboard-stats-grid">
+          <div class="dash-stat-card border-pink">
+            <span class="dash-stat-icon text-pink"><i class="fa-solid fa-trophy"></i></span>
+            <span class="dash-stat-val" id="dash-points-val">0</span>
+            <span class="dash-stat-name">Total Points</span>
+          </div>
+          <div class="dash-stat-card border-yellow">
+            <span class="dash-stat-icon text-orange"><i class="fa-solid fa-star"></i></span>
+            <span class="dash-stat-val" id="dash-stars-val">0 / 5</span>
+            <span class="dash-stat-name">Stars Collected</span>
+          </div>
+          <div class="dash-stat-card border-cyan">
+            <span class="dash-stat-icon text-cyan"><i class="fa-solid fa-map-location-dot"></i></span>
+            <span class="dash-stat-val" id="dash-sections-val">0 / 5</span>
+            <span class="dash-stat-name">Sections Explored</span>
+          </div>
+          <div class="dash-stat-card border-purple">
+            <span class="dash-stat-icon text-purple"><i class="fa-solid fa-medal"></i></span>
+            <span class="dash-stat-val" id="dash-badges-val">0 / 5</span>
+            <span class="dash-stat-name">Badges Unlocked</span>
+          </div>
+        </div>
+
+        <!-- Section Discovery & Star Quests -->
+        <div class="dashboard-checklist-section">
+          <h4 class="dash-section-title"><i class="fa-solid fa-list-check"></i> Section Star Quests</h4>
+          <p class="dash-section-caption">Visit each unique section once to collect its star & earn points!</p>
+          <div class="dashboard-checklist-grid">
+            <div class="section-star-item" id="star-quest-about">
+              <span class="section-star-status"><i class="fa-regular fa-star"></i></span>
+              <div class="section-star-info">
+                <span class="section-star-name">About Me Section</span>
+                <span class="section-star-pts">+10 Points • 1 Star</span>
+              </div>
+            </div>
+            <div class="section-star-item" id="star-quest-skills">
+              <span class="section-star-status"><i class="fa-regular fa-star"></i></span>
+              <div class="section-star-info">
+                <span class="section-star-name">Skills Section</span>
+                <span class="section-star-pts">+15 Points • 1 Star</span>
+              </div>
+            </div>
+            <div class="section-star-item" id="star-quest-projects">
+              <span class="section-star-status"><i class="fa-regular fa-star"></i></span>
+              <div class="section-star-info">
+                <span class="section-star-name">Projects Section</span>
+                <span class="section-star-pts">+15 Points • 1 Star</span>
+              </div>
+            </div>
+            <div class="section-star-item" id="star-quest-journey">
+              <span class="section-star-status"><i class="fa-regular fa-star"></i></span>
+              <div class="section-star-info">
+                <span class="section-star-name">Journey Section</span>
+                <span class="section-star-pts">+10 Points • 1 Star</span>
+              </div>
+            </div>
+            <div class="section-star-item" id="star-quest-activity">
+              <span class="section-star-status"><i class="fa-regular fa-star"></i></span>
+              <div class="section-star-info">
+                <span class="section-star-name">Portfolio Activity (Flip a Skill Card or Arcade)</span>
+                <span class="section-star-pts">+20 Points • 1 Star</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievements Badges Showcase -->
+        <div class="dashboard-badges-section">
+          <h4 class="dash-section-title"><i class="fa-solid fa-award"></i> Explorer Achievements</h4>
+          <div class="dash-badges-grid">
+            <!-- Badge 1: First Explorer -->
+            <div class="dash-badge-item locked" data-badge="first-explorer" id="dash-badge-first-explorer">
+              <div class="dash-badge-icon bg-pink-gradient">🌟</div>
+              <div class="dash-badge-text">
+                <span class="dash-badge-title">First Explorer</span>
+                <span class="dash-badge-desc">Visit your first portfolio section.</span>
+                <span class="dash-badge-state">Locked</span>
+              </div>
+            </div>
+
+            <!-- Badge 2: Curious Mind -->
+            <div class="dash-badge-item locked" data-badge="curious-mind" id="dash-badge-curious-mind">
+              <div class="dash-badge-icon bg-yellow-gradient">🧠</div>
+              <div class="dash-badge-text">
+                <span class="dash-badge-title">Curious Mind</span>
+                <span class="dash-badge-desc">Explore three different sections.</span>
+                <span class="dash-badge-state">Locked</span>
+              </div>
+            </div>
+
+            <!-- Badge 3: Skill Hunter -->
+            <div class="dash-badge-item locked" data-badge="skill-hunter" id="dash-badge-skill-hunter">
+              <div class="dash-badge-icon bg-cyan-gradient">⚡</div>
+              <div class="dash-badge-text">
+                <span class="dash-badge-title">Skill Hunter</span>
+                <span class="dash-badge-desc">Visit the Skills section.</span>
+                <span class="dash-badge-state">Locked</span>
+              </div>
+            </div>
+
+            <!-- Badge 4: Project Explorer -->
+            <div class="dash-badge-item locked" data-badge="project-explorer" id="dash-badge-project-explorer">
+              <div class="dash-badge-icon bg-purple-gradient">🚀</div>
+              <div class="dash-badge-text">
+                <span class="dash-badge-title">Project Explorer</span>
+                <span class="dash-badge-desc">Visit the Projects section.</span>
+                <span class="dash-badge-state">Locked</span>
+              </div>
+            </div>
+
+            <!-- Badge 5: Portfolio Master -->
+            <div class="dash-badge-item locked" data-badge="portfolio-master" id="dash-badge-portfolio-master">
+              <div class="dash-badge-icon bg-green-gradient">👑</div>
+              <div class="dash-badge-text">
+                <span class="dash-badge-title">Portfolio Master</span>
+                <span class="dash-badge-desc">Explore all main portfolio sections.</span>
+                <span class="dash-badge-state">Locked</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="dashboard-modal-footer">
+        <span class="dashboard-auto-save-hint">
+          <i class="fa-solid fa-cloud-arrow-up"></i> Progress safely saved in your browser
+        </span>
+        <button class="btn-reset-progress" id="btn-reset-progress" title="Reset your adventure progress">
+          <i class="fa-solid fa-arrow-rotate-left"></i> Reset Progress
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification / Pop-up for Gamification Feedback -->
+  <div id="toast-notification" class="toast-notification" role="status" aria-live="polite">
+    <span class="toast-icon">✨</span>
+    <span class="toast-message" id="toast-text">Welcome to the portfolio!</span>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
